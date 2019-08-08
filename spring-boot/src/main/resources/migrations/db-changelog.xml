@@ -1,0 +1,35 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <changeSet id="t_city_1" author="etauroginskaya@gmail.com">
+        <createTable tableName="city">
+            <column autoIncrement="true" name="id" type="bigint">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(63)"/>
+            <column name="description" type="text(1020)"/>
+        </createTable>
+        <insert tableName="city">
+            <column name="name" value="Москва"/>
+            <column name="description" value="Не забудьте посетить Красную Площадь. Ну а в ЦУМ можно и не заходить)))"/>
+        </insert>
+        <insert tableName="city">
+            <column name="name" value="Санкт-Петербург"/>
+            <column name="description" value="Санкт-Петербург — важный экономический, научный и культурный центр России,
+            крупный транспортный узел. Исторический центр города и связанные с ним комплексы памятников входят в список
+            объектов всемирного наследия ЮНЕСКО; это один из самых важных в стране центров туризма.
+            Среди наиболее значимых культурно-туристических объектов: Эрмитаж, Кунсткамера, Мариинский театр, Российская
+            национальная библиотека, Русский музей, Петропавловская крепость, Исаакиевский собор, Невский проспект."/>
+        </insert>
+        <insert tableName="city">
+            <column name="name" value="Минск"/>
+            <column name="description" value="Минск - столица Белоруссии, административный центр Минской области и Минского
+            района, Город-герой. Крупнейший транспортный узел, политический, экономический, культурный и научный центр
+            страны. Является ядром Минской агломерации. В Минске находится штаб-квартира СНГ. Десятый по численности
+            населения город в Европе, пятый - после Москвы, Санкт-Петербурга, Киева, Ташкента на территории бывшего СССР
+            и третий в ЕАЭС."/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
